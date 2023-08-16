@@ -1,0 +1,60 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-moz-selection, ::before::-moz-selection, ::after::-moz-selection {
+  background-color: #fffaa3;
+}
+*::selection, ::before::selection, ::after::selection {
+  background-color: #fffaa3;
+}
+
+body::-moz-selection {
+  background-color: #fffaa3;
+}
+
+body::selection {
+  background-color: #fffaa3;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "Playfair Display", serif, italic;
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+h6 {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 44px;
+  text-align: left;
+}/*# sourceMappingURL=global.css.map */

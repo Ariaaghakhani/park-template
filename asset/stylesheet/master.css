@@ -1,0 +1,1157 @@
+@font-face {
+  font-family: "Playfair Display Italic", serif;
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+body {
+  position: relative;
+  background-color: #f4f4f1;
+}
+body::-moz-selection {
+  background-color: #fffaa3;
+}
+body::selection {
+  background-color: #fffaa3;
+}
+body header {
+  padding: 0 11.25%;
+  width: 100%;
+  margin-top: 80px;
+  justify-content: space-between;
+}
+body header > label {
+  display: flex;
+  width: 2.5%;
+  height: 5vh;
+  align-items: center;
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+  transform: translateX(75.75vw);
+  margin-top: 2.75vh;
+}
+body header > label:hover ~ nav > div > span:nth-of-type(2) {
+  transform: translateX(0);
+}
+body header > input {
+  position: absolute;
+  transform: translate(100%, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+body header > input:checked ~ .menu {
+  top: 0;
+  transition: 0.8s cubic-bezier(0.85, 0.33, 0.23, 0.96);
+  opacity: 1;
+}
+body header > figure {
+  width: 10%;
+}
+body header > figure > a {
+  width: 20%;
+}
+body header > figure > a > img {
+  width: 70%;
+}
+body header > nav {
+  display: flex;
+  width: 5%;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+body header > nav > div {
+  width: 45%;
+  cursor: pointer;
+}
+body header > nav > div > span {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  height: 3px;
+  margin: 5px;
+  justify-content: end;
+  border-radius: 5%;
+}
+body header > nav > div > span:nth-of-type(2) {
+  transform: translateX(50%);
+  transition: 0.4s ease;
+}
+body header .menu {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  top: -110vh;
+  left: 0;
+  transition: 0.8s cubic-bezier(0.85, 0.33, 0.23, 0.96);
+  cursor: url(../img/close-menu.png), auto;
+  z-index: 100;
+  justify-content: center;
+  align-content: center;
+}
+body header .menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  align-content: center;
+}
+body header .menu > ul > input {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+body header .menu > ul > input:checked ~ .drop_down {
+  transition: 0.4s;
+  margin-bottom: 160px;
+}
+body header .menu > ul > input:checked ~ .drop_down > a i {
+  transform: rotateX(180deg);
+  transition: 0.4s;
+}
+body header .menu > ul > input:checked ~ .drop_down > ul {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+}
+body header .menu > ul .drop_down {
+  transition: 0.4s;
+}
+body header .menu > ul > li {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  z-index: 101;
+  transition: 0.4s;
+}
+body header .menu > ul > li:nth-of-type(1) > a {
+  color: #fffaa3;
+}
+body header .menu > ul > li:nth-of-type(4) > a {
+  color: #fffaa3;
+}
+body header .menu > ul > li:nth-of-type(4) > a {
+  justify-content: center;
+}
+body header .menu > ul > li > a {
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: white;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu > ul > li > a:hover {
+  color: #fffaa3;
+}
+body header .menu > ul > li > a > span {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+body header .menu > ul > li > a > span > i {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fffaa3;
+}
+body header .menu > ul > li > label {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+body header .menu > ul > li > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+body header .menu > ul > li > ul > li {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu > ul > li > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #989898;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+body header .menu > ul > li > ul > li > a:hover {
+  color: #fffaa3;
+}
+body > main {
+  padding: 0 11.25%;
+  padding-bottom: 200px;
+}
+body > main > div {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+body > main > div h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 60px;
+  letter-spacing: 0.5px;
+}
+body > main > div h1::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > div h1::selection {
+  background-color: #fffaa3;
+}
+body > main > div h1 > i {
+  font-family: "Playfair Display", serif, italic;
+  position: relative;
+}
+body > main > div h1 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > div h1 > i::selection {
+  background-color: #fffaa3;
+}
+body > main > div h1 > i::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  height: 10px;
+  background-color: #fffaa3;
+  z-index: -1;
+}
+body > main .box1 {
+  width: 100%;
+  position: relative;
+}
+body > main .box1 > figure {
+  overflow: hidden;
+  width: 62.5%;
+  height: 100%;
+}
+body > main .box1 > figure:hover img {
+  transform: scale(105%, 105%);
+  transition: 0.4s ease;
+}
+body > main .box1 > figure > a {
+  width: 100%;
+  overflow: hidden;
+}
+body > main .box1 > figure > a > img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+body > main .box1 > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45.125%;
+  background-color: #fff;
+  align-items: center;
+  height: 60%;
+  padding: 5% 7.5%;
+  margin-top: 10%;
+  position: absolute;
+  right: 0;
+}
+body > main .box1 > span > h6 {
+  margin-bottom: 24px;
+}
+body > main .box1 > span > h6 > a {
+  color: #000000;
+  position: relative;
+  z-index: 10;
+  transition: 0.4s ease;
+  text-transform: uppercase;
+}
+body > main .box1 > span > h6 > a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  height: 3px;
+  background-color: #fffaa3;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+body > main .box1 > span > h6 > a:hover::after {
+  top: 120%;
+  transition: 0.4s ease;
+}
+body > main .box1 > span > h6 > a:hover {
+  color: #444;
+  transition: 0.4s ease;
+}
+body > main .box1 > span > h6::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > h6::selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > a:hover > h2 {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body > main .box1 > span > a > h2 {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  transition: 0.4s ease;
+}
+body > main .box1 > span > a > h2 > i {
+  font-family: "Playfair Display", serif, italic;
+}
+body > main .box1 > span > a > h2 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > a > h2 > i::selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > a > h2::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > a > h2::selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > p {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+body > main .box1 > span > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > p::selection {
+  background-color: #fffaa3;
+}
+body > main .box1 > span > span {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translateY(71%);
+}
+body > main .box1 > span > span > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main .box1 > span > span > a:hover > i {
+  color: #fffaa3;
+  transition: 0.2s ease;
+  font-size: 36px;
+}
+body > main .box1 > span > span > a > i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+body > main .box2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding-right: 7.5%;
+}
+body > main .box2 * {
+  text-align: right;
+}
+body > main .box2 > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 47.125%;
+  background-color: #fff;
+  align-items: center;
+  height: 50%;
+  padding: 5% 8.5%;
+  margin-top: 10%;
+  position: absolute;
+  left: 10%;
+  justify-content: end;
+  z-index: 10;
+}
+body > main .box2 > span > h6 {
+  margin-bottom: 24px;
+  text-align: right;
+}
+body > main .box2 > span > h6 > a {
+  width: 100%;
+  color: #000000;
+  position: relative;
+  z-index: 10;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > h6 > a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  height: 3px;
+  background-color: #fffaa3;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > h6 > a:hover::after {
+  top: 120%;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > h6 > a:hover {
+  color: #444;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > h6::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > h6::selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > a:hover > h2 {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > a > h2 {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  transition: 0.4s ease;
+}
+body > main .box2 > span > a > h2 > i {
+  font-family: "Playfair Display", serif, italic;
+}
+body > main .box2 > span > a > h2 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > a > h2 > i::selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > a > h2::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > a > h2::selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > p {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+body > main .box2 > span > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > p::selection {
+  background-color: #fffaa3;
+}
+body > main .box2 > span > span {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translateY(71%);
+  display: flex;
+  justify-content: end;
+}
+body > main .box2 > span > span > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main .box2 > span > span > a:hover > i {
+  color: #fffaa3;
+  transition: 0.2s ease;
+  font-size: 36px;
+}
+body > main .box2 > span > span > a > i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+body > main .box2 > figure {
+  overflow: hidden;
+  width: 47.5%;
+  height: 100%;
+  transform: translateY(-10%);
+  z-index: 0;
+}
+body > main .box2 > figure:hover img {
+  transform: scale(105%, 105%);
+  transition: 0.4s ease;
+}
+body > main .box2 > figure > a {
+  width: 100%;
+  overflow: hidden;
+}
+body > main .box2 > figure > a > img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+body > main > .box3 {
+  transform: translateY(-12.5%);
+  width: 100%;
+  position: relative;
+}
+body > main > .box3 > figure {
+  overflow: hidden;
+  width: 62.5%;
+  height: 100%;
+}
+body > main > .box3 > figure:hover img {
+  transform: scale(105%, 105%);
+  transition: 0.4s ease;
+}
+body > main > .box3 > figure > a {
+  width: 100%;
+  overflow: hidden;
+}
+body > main > .box3 > figure > a > img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45.125%;
+  background-color: #fff;
+  align-items: center;
+  height: 40%;
+  padding: 5% 7.5%;
+  margin-top: 20%;
+  position: absolute;
+  right: 0;
+}
+body > main > .box3 > span > h6 {
+  margin-bottom: 24px;
+}
+body > main > .box3 > span > h6 > a {
+  color: #000000;
+  position: relative;
+  z-index: 10;
+  transition: 0.4s ease;
+  text-transform: uppercase;
+}
+body > main > .box3 > span > h6 > a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  height: 3px;
+  background-color: #fffaa3;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span > h6 > a:hover::after {
+  top: 120%;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span > h6 > a:hover {
+  color: #444;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span > h6::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > h6::selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > a:hover > h2 {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span > a > h2 {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  transition: 0.4s ease;
+}
+body > main > .box3 > span > a > h2 > i {
+  font-family: "Playfair Display", serif, italic;
+}
+body > main > .box3 > span > a > h2 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > a > h2 > i::selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > a > h2::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > a > h2::selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > p {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+body > main > .box3 > span > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > p::selection {
+  background-color: #fffaa3;
+}
+body > main > .box3 > span > span {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translateY(27%);
+}
+body > main > .box3 > span > span > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > .box3 > span > span > a:hover > i {
+  color: #fffaa3;
+  transition: 0.2s ease;
+  font-size: 36px;
+}
+body > main > .box3 > span > span > a > i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+body > main > .box4 {
+  transform: translateY(-12.5%);
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding-right: 7.5%;
+}
+body > main > .box4 * {
+  text-align: right;
+}
+body > main > .box4 > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 46.125%;
+  background-color: #fff;
+  align-items: center;
+  height: 50%;
+  padding: 5% 7.5%;
+  margin-top: 10%;
+  position: absolute;
+  left: 10%;
+  justify-content: end;
+  z-index: 10;
+}
+body > main > .box4 > span > h6 {
+  margin-bottom: 24px;
+  text-align: right;
+}
+body > main > .box4 > span > h6 > a {
+  width: 100%;
+  color: #000000;
+  position: relative;
+  z-index: 10;
+  transition: 0.4s ease;
+  text-transform: uppercase;
+}
+body > main > .box4 > span > h6 > a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  height: 3px;
+  background-color: #fffaa3;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+body > main > .box4 > span > h6 > a:hover::after {
+  top: 120%;
+  transition: 0.4s ease;
+}
+body > main > .box4 > span > h6 > a:hover {
+  color: #444;
+  transition: 0.4s ease;
+}
+body > main > .box4 > span > h6::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > h6::selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > a:hover > h2 {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body > main > .box4 > span > a > h2 {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  transition: 0.4s ease;
+}
+body > main > .box4 > span > a > h2 > i {
+  font-family: "Playfair Display", serif, italic;
+}
+body > main > .box4 > span > a > h2 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > a > h2 > i::selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > a > h2::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > a > h2::selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > p {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+body > main > .box4 > span > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > p::selection {
+  background-color: #fffaa3;
+}
+body > main > .box4 > span > span {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translateY(71%);
+  display: flex;
+  justify-content: end;
+}
+body > main > .box4 > span > span > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > .box4 > span > span > a:hover > i {
+  color: #fffaa3;
+  transition: 0.2s ease;
+  font-size: 36px;
+}
+body > main > .box4 > span > span > a > i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+body > main > .box4 > figure {
+  overflow: hidden;
+  width: 47.5%;
+  height: 100%;
+  transform: translateY(-10%);
+  z-index: 0;
+}
+body > main > .box4 > figure:hover img {
+  transform: scale(105%, 105%);
+  transition: 0.4s ease;
+}
+body > main > .box4 > figure > a {
+  width: 100%;
+  overflow: hidden;
+}
+body > main > .box4 > figure > a > img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+body > main > .box5 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: -90px;
+  justify-content: center;
+}
+body > main > .box5 > label {
+  display: flex;
+  position: absolute;
+  display: flex;
+  width: 16.25%;
+  height: 60px;
+  justify-content: center;
+  cursor: pointer;
+}
+body > main > .box5 > label:hover ~ div {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+body > main > .box5 > input {
+  position: absolute;
+  opacity: 0;
+}
+body > main > .box5 > input:checked ~ section {
+  transform: translateY(-35%);
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+}
+body > main > .box5 > div {
+  display: flex;
+  width: 16.25%;
+  height: 60px;
+  background-color: black;
+  margin: 0 auto 50px auto;
+  transition: 0.4s ease;
+  padding: 0;
+  cursor: pointer;
+}
+body > main > .box5 > div > a {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 7px;
+  text-align: center;
+}
+body > main > .box5 > section {
+  display: flex;
+  transform: translateY(-130%);
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > figure {
+  overflow: hidden;
+  width: 62.5%;
+  height: 100%;
+}
+body > main > .box5 > section > figure:hover img {
+  transform: scale(105%, 105%);
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > figure > a {
+  width: 100%;
+  overflow: hidden;
+}
+body > main > .box5 > section > figure > a > img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 44.125%;
+  background-color: #fff;
+  align-items: center;
+  height: 50%;
+  padding: 5% 6.5%;
+  margin-top: 10%;
+  position: absolute;
+  right: 0;
+}
+body > main > .box5 > section > span > h6 {
+  margin-bottom: 24px;
+}
+body > main > .box5 > section > span > h6 > a {
+  color: #000000;
+  position: relative;
+  z-index: 10;
+  transition: 0.4s ease;
+  text-transform: uppercase;
+}
+body > main > .box5 > section > span > h6 > a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  height: 3px;
+  background-color: #fffaa3;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span > h6 > a:hover::after {
+  top: 120%;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span > h6 > a:hover {
+  color: #444;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span > h6::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > h6::selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > a:hover > h2 {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span > a > h2 {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  transition: 0.4s ease;
+}
+body > main > .box5 > section > span > a > h2 > i {
+  font-family: "Playfair Display", serif, italic;
+}
+body > main > .box5 > section > span > a > h2 > i::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > a > h2 > i::selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > a > h2::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > a > h2::selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > p {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+body > main > .box5 > section > span > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > p::selection {
+  background-color: #fffaa3;
+}
+body > main > .box5 > section > span > span {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translateY(-32.5%);
+}
+body > main > .box5 > section > span > span > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > .box5 > section > span > span > a:hover > i {
+  color: #fffaa3;
+  transition: 0.2s ease;
+  font-size: 36px;
+}
+body > main > .box5 > section > span > span > a > i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+body > main > .box5 > section > div {
+  width: 100%;
+  position: absolute;
+  bottom: -30%;
+}
+body > main > .box5 > section > div > div {
+  display: flex;
+  width: 16.25%;
+  height: 60px;
+  background-color: black;
+  margin: 0 auto 50px auto;
+  transition: 0.4s ease;
+  padding: 0;
+}
+body > main > .box5 > section > div > div > a {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 7px;
+  text-align: center;
+}
+body > footer {
+  padding: 0 11.25%;
+  width: 100%;
+  height: 160px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+}
+body > footer > p {
+  display: flex;
+  color: #fff;
+  width: 30%;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  justify-content: start;
+  align-items: center;
+}
+body > footer > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > p::selection {
+  background-color: #fffaa3;
+}
+body > footer > p > a {
+  margin-left: 4px;
+  line-height: 36px;
+  transition: 0.2s ease;
+  color: inherit;
+}
+body > footer > p > a:hover {
+  transition: 0.2s ease;
+  color: #444;
+}
+body > footer > p > a::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > p > a::selection {
+  background-color: #fffaa3;
+}
+body > footer > ul {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+}
+body > footer > ul > li {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-left: 24px;
+}
+body > footer > ul > li > a {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  transition: 0.2s ease;
+  text-transform: capitalize;
+}
+body > footer > ul > li > a:hover {
+  transition: 0.2s ease;
+  color: #444;
+}
+body > footer > ul > li > a::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > ul > li > a::selection {
+  background-color: #fffaa3;
+}/*# sourceMappingURL=master.css.map */
