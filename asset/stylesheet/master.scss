@@ -56,10 +56,10 @@ body {
                 opacity: 1;
             }
 
-            &:checked~nav>div>span {
-                // color: white;
-                // z-index: 112;
-            }
+            // &:checked~nav>div>span {
+            //     // color: white;
+            //     // z-index: 112;
+            // }
 
         }
 
@@ -190,9 +190,9 @@ body {
 
                     }
 
-                    &:nth-of-type(4) {
-                        // border: $bor;
-                    }
+                    // &:nth-of-type(4){
+                    //     // border: $bor;
+                    // }
 
                     >a {
                         display: flex;

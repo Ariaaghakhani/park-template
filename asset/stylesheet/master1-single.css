@@ -1,0 +1,667 @@
+@font-face {
+  font-family: "Playfair Display Italic", serif;
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+@keyframes img1 {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 0;
+  }
+  36.00000001% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes img2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  36% {
+    opacity: 1;
+  }
+  63% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 0;
+  }
+  69.000000001% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes img3 {
+  63% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes btn1 {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  33.00000001% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes btn2 {
+  0% {
+    opacity: 0.5;
+  }
+  33% {
+    opacity: 0.5;
+  }
+  33.00000001% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  66.000000001% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes btn3 {
+  0% {
+    opacity: 0.5;
+  }
+  66% {
+    opacity: 0.5;
+  }
+  66.000000001% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  position: relative;
+}
+body::-moz-selection {
+  background-color: #fffaa3;
+}
+body::selection {
+  background-color: #fffaa3;
+}
+body header {
+  background-color: #f4f4f1;
+  padding: 0 11.25%;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+body header > label {
+  display: flex;
+  width: 2.5%;
+  height: 5vh;
+  align-items: center;
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+  transform: translateX(75.75vw);
+  margin-top: 2.75vh;
+}
+body header > label:hover ~ nav > div > span:nth-of-type(2) {
+  transform: translateX(0);
+}
+body header > input {
+  position: absolute;
+  transform: translate(100%, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+body header > input:checked ~ .menu {
+  top: 0;
+  transition: 0.8s cubic-bezier(0.85, 0.33, 0.23, 0.96);
+  opacity: 1;
+}
+body header > figure {
+  width: 10%;
+}
+body header > figure > a {
+  width: 20%;
+}
+body header > figure > a > img {
+  width: 70%;
+}
+body header > nav {
+  display: flex;
+  width: 5%;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+body header > nav > div {
+  width: 45%;
+  cursor: pointer;
+}
+body header > nav > div > span {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  height: 3px;
+  margin: 5px;
+  justify-content: end;
+  border-radius: 5%;
+}
+body header > nav > div > span:nth-of-type(2) {
+  transform: translateX(50%);
+  transition: 0.4s ease;
+}
+body header .menu {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  top: -110vh;
+  left: 0;
+  transition: 0.8s cubic-bezier(0.85, 0.33, 0.23, 0.96);
+  cursor: url(../img/close-menu.png), auto;
+  z-index: 100;
+  justify-content: center;
+  align-content: center;
+}
+body header .menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  align-content: center;
+}
+body header .menu > ul > input {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+body header .menu > ul > input:checked ~ .drop_down {
+  transition: 0.4s;
+  margin-bottom: 160px;
+}
+body header .menu > ul > input:checked ~ .drop_down > a i {
+  transform: rotateX(180deg);
+  transition: 0.4s;
+}
+body header .menu > ul > input:checked ~ .drop_down > ul {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+}
+body header .menu > ul .drop_down {
+  transition: 0.4s;
+}
+body header .menu > ul > li {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  z-index: 101;
+  transition: 0.4s;
+}
+body header .menu > ul > li:nth-of-type(1) > a {
+  color: white;
+}
+body header .menu > ul > li:nth-of-type(4) > a {
+  color: white;
+}
+body header .menu > ul > li:nth-of-type(4) > a {
+  justify-content: center;
+}
+body header .menu > ul > li > a {
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: white;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu > ul > li > a:hover {
+  color: #fffaa3;
+}
+body header .menu > ul > li > a > span {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+body header .menu > ul > li > a > span > i {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fffaa3;
+}
+body header .menu > ul > li > label {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+body header .menu > ul > li > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+body header .menu > ul > li > ul > li {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu > ul > li > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #989898;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+body header .menu > ul > li > ul > li > a:hover {
+  color: #fffaa3;
+}
+body header > section {
+  width: 100%;
+  padding: 0 17.5%;
+}
+body header > section > h1 {
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  color: #000;
+  font-size: 66px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+body header > section > h1::-moz-selection {
+  background-color: #fffaa3;
+}
+body header > section > h1::selection {
+  background-color: #fffaa3;
+}
+body header > section > ul {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+body header > section > ul > li {
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 5px;
+  margin: 10px 20px 30px 20px;
+}
+body header > section > ul > li::-moz-selection {
+  background-color: #fffaa3;
+}
+body header > section > ul > li::selection {
+  background-color: #fffaa3;
+}
+body header > section > ul > li > a {
+  line-height: 22px;
+  color: #000;
+  letter-spacing: 5px;
+  transition: 0.4s ease;
+  position: relative;
+}
+body header > section > ul > li > a:hover {
+  color: #6a6a6a;
+  transition: 0.4s ease;
+}
+body header > section > ul > li > a::before {
+  content: "/";
+  position: absolute;
+  left: -22px;
+}
+body header > section > ul > li > a::-moz-selection {
+  background-color: #fffaa3;
+}
+body header > section > ul > li > a::selection {
+  background-color: #fffaa3;
+}
+body > article {
+  width: 100%;
+  padding: 0 11.25%;
+  padding-top: 100px;
+  justify-content: center;
+}
+body > article > p,
+body > article h4,
+body > article h5 {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+body > article > p::-moz-selection, body > article h4::-moz-selection, body > article h5::-moz-selection {
+  background-color: #fffaa3;
+}
+body > article > p::selection,
+body > article h4::selection,
+body > article h5::selection {
+  background-color: #fffaa3;
+}
+body > article > p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.5px;
+}
+body > article > h4 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+  font-weight: 900;
+  -webkit-text-decoration: underline 5px solid #fffaa3;
+          text-decoration: underline 5px solid #fffaa3;
+}
+body > article > h5 {
+  justify-content: center;
+  font-weight: 300;
+  font-style: italic;
+  border-left: 10px solid #fffaa3;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 35px;
+  width: 29%;
+  padding: 0 10px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+body > article > .slider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 90vh;
+}
+body > article > .slider > figure {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body > article > .slider > figure:nth-of-type(1) {
+  animation-name: img1;
+}
+body > article > .slider > figure:nth-of-type(2) {
+  animation-name: img2;
+}
+body > article > .slider > figure:nth-of-type(3) {
+  animation-name: img3;
+}
+body > article > .slider > figure > img {
+  width: 100%;
+}
+body > article > .slider > div {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  justify-content: center;
+  gap: 15px;
+}
+body > article > .slider > div > span {
+  width: 20px;
+  height: 20px;
+  background-color: #444;
+  opacity: 1;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body > article > .slider > div > span:nth-of-type(1) {
+  animation-name: btn1;
+}
+body > article > .slider > div > span:nth-of-type(2) {
+  animation-name: btn2;
+}
+body > article > .slider > div > span:nth-of-type(3) {
+  animation-name: btn3;
+}
+body > article > .post {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+body > article > .post > .pre,
+body > article > .post .next {
+  width: 48%;
+}
+body > article > .post > .pre > section > span,
+body > article > .post .next > section > span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > article > .post > .pre > section > span > i,
+body > article > .post .next > section > span > i {
+  font-size: 24px;
+  font-weight: 900;
+  transition: 0.4s ease;
+}
+body > article > .post > .pre > section > h4,
+body > article > .post .next > section > h4 {
+  width: 100%;
+  justify-content: end;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+body > article > .post > .pre > section > h4 > a,
+body > article > .post .next > section > h4 > a {
+  color: #000;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  transition: 0.4s ease;
+}
+body > article > .post > .pre > section:hover > h4 > a, body > article > .post > .pre > section:hover > h4 > a > i, body > article > .post > .pre > section:hover > span > i,
+body > article > .post .next > section:hover > h4 > a,
+body > article > .post .next > section:hover > h4 > a > i,
+body > article > .post .next > section:hover > span > i {
+  transition: 0.4s ease;
+  color: #6a6a6a;
+}
+body > article > .post > .pre > h6 > a,
+body > article > .post .next > h6 > a {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000;
+  transition: 0.4s ease;
+}
+body > article > .post > .pre > h6 > a:hover,
+body > article > .post .next > h6 > a:hover {
+  transition: 0.4s ease;
+  color: #6a6a6a;
+}
+body > article > .post .pre {
+  justify-content: end;
+  padding-left: 25%;
+}
+body > article > .post .pre > section {
+  justify-content: end;
+}
+body > article > .post .pre > section > span {
+  width: 100%;
+  justify-content: end;
+  text-align: right;
+}
+body > article > .post .pre > section > span > i {
+  transform: translateX(5px);
+}
+body > article > .post .pre > section > h4 {
+  width: 100%;
+  text-align: right;
+}
+body > article > .post .pre > section:hover i {
+  transition: 0.4s ease;
+  transform: translateX(-10%);
+}
+body > article > .post .next {
+  justify-content: start;
+  padding-right: 20%;
+}
+body > article > .post .next > section > span {
+  display: flex;
+  justify-content: start;
+}
+body > article > .post .next > section > span > i {
+  transform: translateX(-5px);
+}
+body > article > .post .next > section > h4 {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+body > article > .post .next > section:hover i {
+  transition: 0.4s ease;
+  transform: translateX(10%);
+}
+body > footer {
+  padding: 0 11.25%;
+  width: 100%;
+  height: 160px;
+  background-color: black;
+  justify-content: space-between;
+}
+body > footer > p {
+  display: flex;
+  color: #fff;
+  width: 30%;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  justify-content: start;
+  align-items: center;
+}
+body > footer > p::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > p::selection {
+  background-color: #fffaa3;
+}
+body > footer > p > a {
+  margin-left: 4px;
+  line-height: 36px;
+  transition: 0.2s ease;
+  color: inherit;
+}
+body > footer > p > a:hover {
+  transition: 0.2s ease;
+  color: #444;
+}
+body > footer > p > a::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > p > a::selection {
+  background-color: #fffaa3;
+}
+body > footer > ul {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+}
+body > footer > ul > li {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-left: 24px;
+}
+body > footer > ul > li > a {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  transition: 0.2s ease;
+  text-transform: capitalize;
+}
+body > footer > ul > li > a:hover {
+  transition: 0.2s ease;
+  color: #444;
+}
+body > footer > ul > li > a::-moz-selection {
+  background-color: #fffaa3;
+}
+body > footer > ul > li > a::selection {
+  background-color: #fffaa3;
+}/*# sourceMappingURL=master1-single.css.map */
