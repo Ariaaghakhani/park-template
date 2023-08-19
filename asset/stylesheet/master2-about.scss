@@ -58,10 +58,7 @@ body {
                 opacity: 1;
             }
 
-            // &:checked~nav>div>span {
-            //     // color: white;
-            //     // z-index: 112;
-            // }
+            
 
         }
 
@@ -180,11 +177,7 @@ body {
                     z-index: 101;
                     transition: .4s;
 
-                    &:nth-of-type(1)>a {
-                        color: $highlight;
-                    }
-
-                    &:nth-of-type(4)>a {
+                    &:nth-of-type(2)>a {
                         color: $highlight;
                     }
 

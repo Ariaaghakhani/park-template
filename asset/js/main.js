@@ -1,8 +1,14 @@
+document.querySelector('.event-stop').addEventListener("click", (event) => {
+
+    event.stopPropagation();
+    
+});
 
 
-// console.log(menu);
 
-function my(){
-    console.log('ss');
-    document.querySelector('#menu').checked = false;
+function my(event){
+   
+        document.querySelector('#menu').checked = false;   
 }
+
+
