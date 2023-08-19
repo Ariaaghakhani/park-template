@@ -226,6 +226,9 @@ body header .menu > ul > input:checked ~ .drop_down > ul {
 body header .menu > ul .drop_down {
   transition: 0.4s;
 }
+body header .menu > ul .drop_down:hover > a {
+  color: #fffaa3;
+}
 body header .menu > ul > li {
   display: flex;
   width: 100%;

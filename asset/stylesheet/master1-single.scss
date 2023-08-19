@@ -304,6 +304,9 @@ body {
 
                 .drop_down {
                     transition: .4s;
+                    &:hover>a{
+                        color: $highlight;
+                    }
                 }
 
                 >li {
