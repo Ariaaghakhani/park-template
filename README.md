@@ -14,7 +14,7 @@
 
 - 👨🏻‍💻 Developed by Aria AG
   
-- 🖥️ Created - 2023 Nov 10
+- 🖥️ Created - 2023 Aug
   
 - 🤖 Technologies Used - HTML5 , CSS3 , JavaScript , TailwindCSS
 
